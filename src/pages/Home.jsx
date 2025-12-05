@@ -130,7 +130,7 @@ export default function Home() {
               "
             >
               <img
-                src="/public/assets/profileimage.jpg"
+                src="/assets/profileimage.jpg"
                 alt="Tushar"
                 className="w-full h-full object-cover rounded-full"
               />
