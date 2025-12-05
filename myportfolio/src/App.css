@@ -1,0 +1,28 @@
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+
+.bg-mesh {
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08), transparent 60%);
+}
+
+
+.bg-lines {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05) 0,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+}

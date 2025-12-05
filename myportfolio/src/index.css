@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+
+
+.bg-skill-mesh {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(106,203,255,0.18), transparent 50%),
+    radial-gradient(circle at 80% 60%, rgba(255,255,255,0.08), transparent 50%),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px);
+  background-size: auto, auto, 22px 22px;
+  background-color: #0b0b0b;
+}
+
+
+.bg-project-grid {
+  background-image: 
+    linear-gradient(135deg, rgba(237, 71, 71, 0.05) 1px, transparent 1px);
+  background-size: 35px 35px;
+  background-color: #0b0b0b;
+}
+
+
+.bg-contact-spot {
+  background:
+    radial-gradient(circle at 50% 70%, rgba(255,255,255,0.08), transparent 70%),
+    #0b0b0b;
+}
+
+.bg-project-glow {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(209, 238, 248, 0.089), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(74, 165, 239, 0.08), transparent 60%),
+    #0b0b0b;
+}
+
+
+
+
+.bg-project-spotlight {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(176, 208, 245, 0.07), transparent 70%),
+    #0b0b0b;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+.nav-item {
+  color: #d3d3d3;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: #6ACBFF;
+  text-shadow: 0 0 20px rgba(106,203,255,0.5);
+}
+
+.mobile-link {
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.mobile-link:hover {
+  color: #6ACBFF;
+}
