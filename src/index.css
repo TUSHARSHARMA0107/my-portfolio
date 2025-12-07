@@ -79,3 +79,81 @@
 .mobile-link:hover {
   color: #6ACBFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* navbar style */
+.icon-btn {
+  @apply w-10 h-10 flex items-center justify-center rounded-full border border-white/20 
+         text-white text-xl hover:bg-white/10 hover:scale-110 transition-all;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeDown { animation: fadeDown 0.8s ease-out forwards; }
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slideLeft { animation: slideLeft 0.8s ease-out; }
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slideRight { animation: slideRight 0.8s ease-out; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn { animation: fadeIn 1s ease-out; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideDown { animation: slideDown 0.4s ease-out; }
+
+@keyframes popIn {
+  0% { transform: scale(0.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-popIn { animation: popIn 0.5s cubic-bezier(0.25, 1.4, 0.3, 1); }
+
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.3; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+.animate-pulseRing {
+  animation: pulseRing 1.8s infinite ease-out;
+}
+
+
+
+
+html.dark, body.dark {
+  background-color: #080808;
+  color: white;
+}
+
+html.light, body.light {
+  background-color: #f7f7f7;
+  color: #222;
+}
