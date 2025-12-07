@@ -13,7 +13,7 @@ export const projectsData = [
     title: "Billing-Service",
     description:
       "Admin dashboard for managing orders, inventory, users and analytics.",
-    image: "/public/project/billingapp.png",
+    image: "/project/billingapp.png",
     tech: ["React", "Tailwind", "Express","PostSql","Vercel","Render-Backend"],
     github: "https://github.com/TUSHARSHARMA0107/billing-app-new.git",
     live: "https://billing-app-new.vercel.app/",
