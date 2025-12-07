@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
       "
     >
       {/* IMAGE */}
-      <div className="w-full aspect video overflow-hidden rounded -x1 border-white/10">
+      <div className="w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-xl border-white/10">  {/* image ke changes*/}
         <img
           src={project.image}
           className="w-full h-full  hover:scale-110 transition-all duration-500"

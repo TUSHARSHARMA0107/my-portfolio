@@ -2,27 +2,28 @@ export const projectsData = [
   {
     title: "Easy-Stay",
     description:
-      "A full-stack A hotel/stay booking website which is access and used by both user and business-owner",
-    image: "/public/project/eaststay.png",
+      "A full-stack A hotel/stay booking website which is access and used by both user and business-owner.Due to render used for backend the server respose could be slow",
+      
+    image: "/project/eaststay.png",
     tech: ["React", "Node.js", "Express", "PostSql","Vercel","Render"],
-    github: "https://github.com/example",
-    live: "https://example.com",
+    github: "https://github.com/TUSHARSHARMA0107/Easy-stay.git",
+    live: "https://easy-stay-frontend.vercel.app/",
   },
   {
     title: "Billing-Service",
     description:
       "Admin dashboard for managing orders, inventory, users and analytics.",
-    image: "/public/project/billingweb.png",
-    tech: ["React", "Tailwind", "Firebase"],
-    github: "https://github.com/example",
-    live: "https://example.com",
+    image: "/public/project/billingapp.png",
+    tech: ["React", "Tailwind", "Express","PostSql","Vercel","Render-Backend"],
+    github: "https://github.com/TUSHARSHARMA0107/billing-app-new.git",
+    live: "https://billing-app-new.vercel.app/",
   },
   {
-    title: "Portfolio Website",
+    title: "Fitness Website",
     description:
-      "A premium multi-section portfolio built with animations, 3D tilt and glass UI.",
+      "A frontend based website develpoed to manage and guide fitness journey for the user",
     image: "/projects/portfolio.png",
-    tech: ["React", "Tailwind", "Framer Motion"],
+    tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/example",
     live: "https://example.com",
   },

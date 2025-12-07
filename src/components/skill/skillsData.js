@@ -1,36 +1,36 @@
 export const skillsData = {
   frontend: [
-    { name: "HTML", icon: "/public/skills/html.png" },
-    { name: "CSS", icon: "/public/skills/css.png" },
-    { name: "JavaScript", icon: "/public/skills/javascript.png" },
-    { name: "React JS", icon: "/public/skills/reactjs.png" },
-    { name: "Tailwind CSS", icon: "/public/skills/tailwindcss.png" },
-    { name: "Bootstrap", icon: "/public/skills/bootstrap.png" },
+    { name: "HTML", icon: "/skills/html.png" },
+    { name: "CSS", icon: "/skills/css.png" },
+    { name: "JavaScript", icon: "/skills/javascript.png" },
+    { name: "React JS", icon: "/skills/reactjs.png" },
+    { name: "Tailwind CSS", icon: "/skills/tailwindcss.png" },
+    { name: "Bootstrap", icon: "/skills/bootstrap.png" },
   ],
 
   backend: [
-    { name: "Node JS", icon: "/public/skills/nodejs.png" },
-    { name: "Express JS", icon: "/public/skills/express.png" },
-    { name: "Spring Boot", icon: "/public/skills/springboot.png" },
-    { name: "MySQL", icon: "/public/skills/mysql.png" },
-    { name: "MongoDB", icon: "/public/skills/mongodb.png" },
+    { name: "Node JS", icon: "/skills/nodejs.png" },
+    { name: "Express JS", icon: "/skills/express.png" },
+    { name: "Spring Boot", icon: "/skills/springboot.png" },
+    { name: "MySQL", icon: "/skills/mysql.png" },
+    { name: "MongoDB", icon: "/skills/mongodb.png" },
   ],
 
   languages: [
-    { name: "Java", icon: "/public/skills/java.png" },
-    { name: "Python", icon: "/public/skills/python.png" },
-    { name: "JavaScript", icon: "/public/skills/javascript.png" },
+    { name: "Java", icon: "/skills/java.png" },
+    { name: "Python", icon: "/skills/python.png" },
+    { name: "JavaScript", icon: "/skills/javascript.png" },
 //     { name: "TypeScript", icon: "/icons/ts.pn" },
   ],
 
   tools: [
-    { name: "Git", icon: "/public/skills/git.png" },
-    { name: "GitHub", icon: "/public/skills/github.png" },
-    { name: "VS Code", icon: "/public/skills/vscode.png" },
-    { name: "Postman", icon: "/public/skills/postman.png" },
-    { name: "Verel", icon: "/public/skills/vercel.png" },
-    {name:"Render",icon:""},
-    {name:"railways",icon:""},
-    {name:"Thunder Client",icon:""}
+    { name: "Git", icon: "/skills/git.png" },
+    { name: "GitHub", icon: "/skills/github.png" },
+    { name: "VS Code", icon: "/skills/vscode.png" },
+    { name: "Postman", icon: "/skills/postman.png" },
+    { name: "Verel", icon: "/skills/vercel.jpg" },
+    {name:"Render",icon:"/skills/render.jpg"},
+    {name:"Railways",icon:"/skills/railway.jpg"},
+    {name:"Thunder Client",icon:"/skills/thunderclient.jpg"}
   ],
 };

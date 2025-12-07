@@ -35,7 +35,7 @@ export default function EducationCard() {
           className="flex items-center gap-6"
         >
           <img
-            src="/public/college.jpg"
+            src="/education/college.jpg"
             className="w-20 h-20 rounded-full object-cover shadow-xl"
           />
 
@@ -60,7 +60,7 @@ export default function EducationCard() {
           className="flex items-center gap-6"
         >
           <img
-            src="/public/school.jpg"
+            src="/education/school.jpg"
             className="w-20 h-20 rounded-full object-cover shadow-xl"
           />
 

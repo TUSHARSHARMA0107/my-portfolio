@@ -53,8 +53,7 @@ export default function Home() {
                   "Full-Stack Developer",
                   "Backend Engineer",
                   "Frontend Developer",
-                  "UI/UX Designer",
-                  "Computer Science "
+                  "Web Developer"
                 ]}
                 loop={0}
                 cursor
@@ -68,9 +67,7 @@ export default function Home() {
 
           {/* DESCRIPTION */}
           <p className="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
-            I build modern, scalable applications using React, Tailwind, Node.js and 
-            Spring Boot. I focus on clean UI, production-grade code and beautiful 
-            digital experiences.
+          I'm a full-stack developer who loves building modern, performance-focused applications. Clean Ul, strong backend structure and premium experiences motivate my work.
           </p>
 
           {/* DOWNLOAD CV BUTTON */}
