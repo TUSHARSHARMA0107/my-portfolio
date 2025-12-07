@@ -1,7 +1,16 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React,{createContext} from "react";
+import useIsMobile from "./hooks/useIsMobile.js";
+
+
+export const DeviceContext = createContext();
+
 
 export default function Navbar() {
+
+   const isMobile = useIsMobile(); // <-- Hook used once ONLY here
   return (
+    
     <header
       className="
         fixed top-0 left-0 w-full z-50
