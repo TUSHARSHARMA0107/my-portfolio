@@ -31,6 +31,8 @@ export const skillsData = {
     { name: "Verel", icon: "/skills/vercel.jpg" },
     {name:"Render",icon:"/skills/render.jpg"},
     {name:"Railways",icon:"/skills/railway.jpg"},
-    {name:"Thunder Client",icon:"/skills/thunderclient.jpg"}
+    {name:"Thunder Client",icon:"/skills/thunderclient.jpg"},
+    {name:"Generative AI",icon:"/skills/generative ai.jpg"},
+    {name:"Promt-Engineering",icon:"/skills/promtengineering.jpg"}
   ],
 };
