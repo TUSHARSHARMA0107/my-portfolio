@@ -24,7 +24,7 @@ export const projectsData = [
       "A frontend based website develpoed to manage and guide fitness journey for the user",
     image: "/projects/portfolio.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/example",
-    live: "https://example.com",
+    github: "https://github.com/TUSHARSHARMA0107/website.git",
+    live: "https://website-seven-theta-19.vercel.app/",
   },
 ];
