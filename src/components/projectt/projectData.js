@@ -20,7 +20,8 @@ export const projectsData = [
   },
   {
     title: "Fitness Website",
-    description: "A frontend based website develpoed to manage and guide fitness journey for the user.It is totally frontend based website.",
+    description:
+      "A frontend based website develpoed to manage and guide fitness journey for the user",
     image: "/project/fitness.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/TUSHARSHARMA0107/website.git",
