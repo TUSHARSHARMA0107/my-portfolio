@@ -20,9 +20,8 @@ export const projectsData = [
   },
   {
     title: "Fitness Website",
-    description:
-      "A frontend based website develpoed to manage and guide fitness journey for the user",
-    image: "/projects/portfolio.png",
+    description: "A frontend based website develpoed to manage and guide fitness journey for the user.It is totally frontend based website.",
+    image: "/project/fitness.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/TUSHARSHARMA0107/website.git",
     live: "https://website-seven-theta-19.vercel.app/",
