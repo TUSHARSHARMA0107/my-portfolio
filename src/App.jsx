@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 
 
 
+
 // Global device context
 export const DeviceContext = createContext();
 
@@ -35,6 +36,7 @@ function App() {
         <About />
         <Skills/>
         <Projects/>
+      
       {/* <Experience/> */}
       <Contact/>
       

@@ -73,7 +73,7 @@ export default function Home() {
           {/* DOWNLOAD CV BUTTON */}
           <div className="mt-10">
             <a
-              href="https://drive.google.com/uc?export=download&id=1h6Hkfie977GNCeubaHmCLbnlQaKPmWkR"    ////resume link//
+              href="../../public/resume/tushar.pdf"    ////resume link//
               target="_blank"
               className="
                 inline-flex items-center gap-3 px-8 py-4 

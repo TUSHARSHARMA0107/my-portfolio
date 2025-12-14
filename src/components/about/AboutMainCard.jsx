@@ -25,7 +25,7 @@ export default function AboutMainCard() {
 
           <h3 className="text-4xl md:text-5xl font-extrabold leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6ACBFF] to-[#A5B8FF]">
-              Me
+              About Me
             </span>
           </h3>
 

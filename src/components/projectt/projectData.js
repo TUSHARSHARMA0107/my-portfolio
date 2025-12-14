@@ -25,6 +25,6 @@ export const projectsData = [
     image: "/project/fitness.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/TUSHARSHARMA0107/website.git",
-    live: "https://website-seven-theta-19.vercel.app/",
+    live: "https://website-ten-lake-3i3kvau3cj.vercel.app/html/home.html",
   },
 ];

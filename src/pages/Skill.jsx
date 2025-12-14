@@ -4,7 +4,7 @@ import SkillCard from "../components/skill/Skillcard";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#0b0b0b] text-white  bg-project-spotlight  py-28 px-6 ">
+    <section id="skills" className="py-24 px-6 bg-[#0b0b0b] text-white  bg-project-spotlight  py-28 px-6 ">
       {/* HEADING */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -26,7 +26,7 @@ export default function Skills() {
         className="text-center text-gray-300 max-w-2xl mx-auto mb-16"
       >
         A collection of my technical skills and tools that I use to build
-        modern, scalable and production–ready applications.
+        modern, scalable and productionready applications.
       </motion.p>
 
       {/* GRID OF CARDS */}

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin,FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -28,6 +28,9 @@ export default function Footer() {
           >
             <FaLinkedin />
           </a>
+
+
+          
         </div>
 
       </div>
