@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin,FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin,FaInstagram , FaEnvelope} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -28,6 +28,23 @@ export default function Footer() {
           >
             <FaLinkedin />
           </a>
+          
+           
+          <a
+            href=" https://www.instagram.com/__tushar.sharma__?igsh=MWN1OWgwMTZkcTBrYw=="
+            target="_blank"
+            className="text-gray-300 hover:text-white hover:scale-110 transition duration-300"
+          >
+            <FaInstagram />
+          </a>
+
+           <a
+            href="mailto:tushar43189@gmail.com"
+            target="_blank"
+            className="text-[#6ACBFF] hover:text-[#90d9ff] hover:scale-110 transition duration-300"
+          >
+            <FaEnvelope />
+          </a>
 
 
           
@@ -43,3 +60,4 @@ export default function Footer() {
     </footer>
   );
 }
+

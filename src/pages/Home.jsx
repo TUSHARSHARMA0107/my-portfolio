@@ -82,6 +82,8 @@ export default function Home() {
                 bg-white/10 backdrop-blur-md 
                 hover:bg-white/20 transition-all duration-300
               "
+
+              download
             >
               <FiDownload className="text-xl" />
               Download CV
