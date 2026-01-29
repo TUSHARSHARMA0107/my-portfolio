@@ -1,145 +1,93 @@
-import Tilt from "react-parallax-tilt";
+
 import { Typewriter } from "react-simple-typewriter";
 import { FiDownload } from "react-icons/fi";
 
-export default function Home() {
+export default function Hero() {
   return (
     <section
       id="home"
       className="
-        relative min-h-screen flex items-center px-6 pt-24 
-        bg-[#0b0b0b] text-white overflow-hidden bg-skill-mesh py-28 px-6
+        relative min-h-screen flex items-center justify-center
+        bg-[#0a0a0a] text-white overflow-hidden
+        px-5 sm:px-8
       "
     >
-      {/* BACKGROUND GLOWS */}
-      <div className="absolute -top-32 -left-28 w-[420px] h-[420px] bg-gray-600/10 rounded-full blur-[160px]" />
-      <div className="absolute bottom-10 -right-28 w-[380px] h-380px] bg-gray-500/10 rounded-full blur-[160px]" />
+      {/* BACKGROUND GLOW */}
+      <div className="absolute top-[-20%] left-[-20%] w-[400px] h-[400px] bg-blue-500/10 blur-[180px]" />
+      <div className="absolute bottom-[-20%] right-[-20%] w-[400px] h-[400px] bg-indigo-500/10 blur-[180px]" />
 
-      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center z-10">
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-4xl w-full text-center">
 
-        {/* LEFT SIDE */}
-        <div>
-          {/* Line 1 */}
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-300">
-            Hi, I’m
-          </h1>
-
-          {/* BIG TUSHAR */}
-          <h1
-            className="text-8xl md:text-7xl font-extrabold mt-2 leading-tight"
-            style={{ color: "#6ACBFF" }}
-          >
-            Tushar Sharma
-          </h1>
-
-          {/* TYPEWRITER */}
-          <h2 className="mt-6 text-2.5xl md:text-4xl font-semibold flex gap-3 text-gray-300">
-            <span>I am</span>
-
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A5B8FF] to-[#8AA7FF]">
-              a
-            </span>
-
-            <span
-              className="
-                font-extrabold
-                text-transparent bg-clip-text
-                bg-gradient-to-r from-[#A5B8FF] to-[#8AA7FF]
-              "
-            >
-              <Typewriter
-                words={[
-                  "Software Developer",
-                  "Full-Stack Developer",
-                  "Backend Engineer",
-                  "Frontend Developer",
-                  "Web Developer"
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={40}
-                delaySpeed={1400}
-              />
-            </span>
-          </h2>
-
-          {/* DESCRIPTION */}
-          <p className="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
-          I'm a full-stack developer who loves building modern, performance-focused applications. Clean Ul, strong backend structure and premium experiences motivate my work.
-          </p>
-
-          {/* DOWNLOAD CV BUTTON */}
-          <div className="mt-10">
-            <a
-              href="/resume/tushar.pdf"    ////resume link//
-              target="_blank"
-              className="
-                inline-flex items-center gap-3 px-8 py-4 
-                rounded-xl font-semibold text-lg 
-                border border-gray-400 hover:border-white
-                bg-white/10 backdrop-blur-md 
-                hover:bg-white/20 transition-all duration-300
-              "
-
-              download
-            >
-              <FiDownload className="text-xl" />
-              Download CV
-            </a>
+        {/* PROFILE IMAGE */}
+        <div className="flex justify-center mb-8">
+          <div className="relative w-[140px] h-[140px] sm:w-[160px] sm:h-[160px]">
+            <div className="absolute inset-0 rounded-full bg-blue-400/20 blur-2xl" />
+            <img
+              src="/assets/profileimage.jpg"
+              alt="Tushar Sharma"
+              className="relative w-full h-full object-cover rounded-full border border-white/10"
+            />
           </div>
         </div>
 
-        {/* RIGHT SIDE — IMAGE WITH TILT */}
-        <div className="flex justify-center md:justify-end">
+        {/* HELLO */}
+        <p className="text-gray-400 text-lg sm:text-xl mb-2">
+          Hi, I’m
+        </p>
 
-          <Tilt
-            tiltMaxAngleX={14}
-            tiltMaxAngleY={14}
-            glareEnable={false}
-            scale={1}   // no zoom
-            transitionSpeed={1800}
+        {/* NAME */}
+        <h1 className="font-extrabold leading-tight text-[2.8rem] sm:text-[3.5rem] md:text-[4.2rem] text-[#6ACBFF]">
+          Tushar Sharma
+        </h1>
+
+        {/* ROLE */}
+        <h2 className="mt-4 text-lg sm:text-xl md:text-2xl font-medium text-gray-300">
+          I am a{" "}
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
+            <Typewriter
+              words={[
+                "Software Developer",
+                "Full-Stack Developer",
+                "Backend Engineer",
+                "Frontend Developer",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1400}
+            />
+          </span>
+        </h2>
+
+        {/* DESCRIPTION */}
+        <p className="mt-6 text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          I build modern, performance-focused web applications with clean UI,
+          scalable backend architecture, and premium user experience.
+        </p>
+
+        {/* CTA */}
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/resume/tushar.pdf"
+            download
             className="
-              relative
-              w-[320px] h-[320px]
-              sm:w-[380px] sm:h-[380px]
-              md:w-[430px] md:h-[430px]
-              lg:w-[500px] lg:h-[500px]
+              inline-flex items-center gap-3
+              px-7 py-3 rounded-xl
+              font-semibold text-base
+              bg-white/10 backdrop-blur-md
+              border border-white/20
+              hover:bg-white/20 hover:border-white
+              transition-all duration-300
             "
           >
-            {/* ONLY GLOW — NO BORDER */}
-            <div
-              className="
-                absolute inset-0 rounded-full
-                
-                /* DARK MODE -> White Glow */
-                dark:shadow-[0_0_60px_20px_rgba(255,255,255,0.50)]
-
-                /* LIGHT MODE -> Soft Light Yellow Glow */
-                shadow-[0_0_55px_18px_rgba(255,249,200,0.55)]
-              "
-            />
-
-            {/* IMAGE */}
-            <div
-              className="
-                w-full h-full rounded-full overflow-hidden
-                shadow-inner shadow-[inset_0_0_40px_rgba(0,0,0,0.45)]
-              "
-            >
-              <img
-                src="/assets/profileimage.jpg"
-                alt="Tushar"
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
-
-          </Tilt>
-
+            <FiDownload className="text-lg" />
+            Download CV
+          </a>
         </div>
-
       </div>
     </section>
   );
-}
+}}
