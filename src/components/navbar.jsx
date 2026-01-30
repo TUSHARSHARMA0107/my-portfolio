@@ -209,11 +209,14 @@ export default function Navbar() {
 
               {/* SOCIALS */}
               <div className="px-6 mt-auto pb-8 flex gap-6">
-                <a href="https://github.com/your-username" target="_blank">
+                <a href="https://github.com/TUSHARSHARMA0107" target="_blank">
                   <FiGithub className="text-white text-2xl hover:text-cyan-400 transition" />
                 </a>
-                <a href="https://linkedin.com/in/your-username" target="_blank">
+                <a href="https://www.linkedin.com/in/tushar-sharma-14ab3a24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                   <FiLinkedin className="text-[#0A66C2] text-2xl hover:scale-110 transition" />
+                  <a href="mailto:tushar43189@gmail.com" target="_blank">
+                  <FiGithub className="text-white text-2xl hover:text-cyan-400 transition" />
+                </a>
                 </a>
               </div>
             </motion.aside>
