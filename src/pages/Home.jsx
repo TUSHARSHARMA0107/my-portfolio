@@ -1,145 +1,150 @@
-import Tilt from "react-parallax-tilt";
-import { Typewriter } from "react-simple-typewriter";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
+  const year = new Date().getFullYear();
+
+  const [text] = useTypewriter({
+    words: ["Software Developer", "Full Stack Developer"],
+    loop: true,
+    typeSpeed: 80,
+    deleteSpeed: 50,
+    delaySpeed: 1800,
+  });
+
+  // Subtle premium single color for typewriter
+  const typewriterClass =
+    "text-sky-400 font-extrabold drop-shadow-[0_0_10px_rgba(56,189,248,0.35)]";
+
   return (
     <section
       id="home"
-      className="
-        relative min-h-screen flex items-center px-6 pt-24 
-        bg-[#0b0b0b] text-white overflow-hidden bg-skill-mesh py-28 px-6
-      "
+      className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[#050505] text-white"
     >
-      {/* BACKGROUND GLOWS */}
-      <div className="absolute -top-32 -left-28 w-[420px] h-[420px] bg-gray-600/10 rounded-full blur-[160px]" />
-      <div className="absolute bottom-10 -right-28 w-[380px] h-380px] bg-gray-500/10 rounded-full blur-[160px]" />
+      {/* ===== BACKGROUND ===== */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgba(59,130,246,0.9) 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+            animation: "dotMove 40s linear infinite",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgba(34,211,238,0.9) 1px, transparent 0)",
+            backgroundSize: "16px 16px",
+            animation: "dotMoveReverse 60s linear infinite",
+          }}
+        />
 
-      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center z-10">
+        <div className="absolute top-1/3 left-1/4 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-[160px]" />
+        <div className="absolute bottom-1/4 right-1/4 h-[360px] w-[360px] rounded-full bg-cyan-400/15 blur-[160px]" />
 
-        {/* LEFT SIDE */}
-        <div>
-          {/* Line 1 */}
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-300">
-            Hi, I’m
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
+      </div>
+
+      {/* ===== CONTENT ===== */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        {/* LEFT */}
+        <div className="order-2 lg:order-1 text-center lg:text-left">
+          <p className="text-blue-500 font-bold tracking-[0.3em] uppercase text-xs mb-5">
+            Portfolio {year}
+          </p>
+
+          <h1 className="font-black leading-[0.95] tracking-tighter italic">
+            <span className="block text-5xl sm:text-7xl md:text-8xl">
+              Tushar
+            </span>
+            <span className="block text-5xl sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
+              Sharma.
+            </span>
           </h1>
 
-          {/* BIG TUSHAR */}
-          <h1
-            className="text-8xl md:text-7xl font-extrabold mt-2 leading-tight"
-            style={{ color: "#6ACBFF" }}
-          >
-            Tushar Sharma
-          </h1>
-
-          {/* TYPEWRITER */}
-          <h2 className="mt-6 text-2.5xl md:text-4xl font-semibold flex gap-3 text-gray-300">
-            <span>I am</span>
-
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A5B8FF] to-[#8AA7FF]">
-              a
+          <h2 className="mt-6 text-lg sm:text-xl md:text-2xl font-light text-gray-400">
+            I am a{" "}
+            <span className={typewriterClass}>
+              {text}
             </span>
-
-            <span
-              className="
-                font-extrabold
-                text-transparent bg-clip-text
-                bg-gradient-to-r from-[#A5B8FF] to-[#8AA7FF]
-              "
-            >
-              <Typewriter
-                words={[
-                  "Software Developer",
-                  "Full-Stack Developer",
-                  "Backend Engineer",
-                  "Frontend Developer",
-                  "Web Developer"
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={40}
-                delaySpeed={1400}
-              />
-            </span>
+            <Cursor cursorColor="#38bdf8" />
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
-          I'm a full-stack developer who loves building modern, performance-focused applications. Clean Ul, strong backend structure and premium experiences motivate my work.
+          <p className="mt-5 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base text-white-500 leading-relaxed">
+            I build clean, scalable, and performance-focused web applications
+            with a strong emphasis on modern UI, smooth user experience, and
+            maintainable backend architecture.
           </p>
 
-          {/* DOWNLOAD CV BUTTON */}
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start">
             <a
-              href="/resume/tushar.pdf"    ////resume link//
-              target="_blank"
-              className="
-                inline-flex items-center gap-3 px-8 py-4 
-                rounded-xl font-semibold text-lg 
-                border border-gray-400 hover:border-white
-                bg-white/10 backdrop-blur-md 
-                hover:bg-white/20 transition-all duration-300
-              "
-
+              href="/resume.pdf"
               download
+              className="group flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-blue-600 hover:text-white transition-all duration-300"
             >
-              <FiDownload className="text-xl" />
+              <FiDownload className="text-xl group-hover:translate-y-1 transition-transform" />
               Download CV
             </a>
+
+            <span className="px-5 py-2 rounded-full bg-green-500/10 border border-green-400/40 text-green-400 text-xs uppercase tracking-widest font-semibold shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+              ● Available for Hire
+            </span>
           </div>
         </div>
 
-        {/* RIGHT SIDE — IMAGE WITH TILT */}
-        <div className="flex justify-center md:justify-end">
+        {/* RIGHT */}
+        <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="relative group">
+            <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 blur-2xl opacity-40 animate-pulseSlow" />
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 opacity-30 animate-spin-slow" />
 
-          <Tilt
-            tiltMaxAngleX={14}
-            tiltMaxAngleY={14}
-            glareEnable={false}
-            scale={1}   // no zoom
-            transitionSpeed={1800}
-            className="
-              relative
-              w-[320px] h-[320px]
-              sm:w-[380px] sm:h-[380px]
-              md:w-[430px] md:h-[430px]
-              lg:w-[500px] lg:h-[500px]
-            "
-          >
-            {/* ONLY GLOW — NO BORDER */}
-            <div
-              className="
-                absolute inset-0 rounded-full
-                
-                /* DARK MODE -> White Glow */
-                dark:shadow-[0_0_60px_20px_rgba(255,255,255,0.50)]
-
-                /* LIGHT MODE -> Soft Light Yellow Glow */
-                shadow-[0_0_55px_18px_rgba(255,249,200,0.55)]
-              "
-            />
-
-            {/* IMAGE */}
-            <div
-              className="
-                w-full h-full rounded-full overflow-hidden
-                shadow-inner shadow-[inset_0_0_40px_rgba(0,0,0,0.45)]
-              "
-            >
+            {/* IMAGE — NO GRAYSCALE */}
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden border-4 border-[#050505] bg-[#111]">
               <img
-                src="/assets/profileimage.jpg"
-                alt="Tushar"
-                className="w-full h-full object-cover rounded-full"
+                src="assets/profileimage.jpg"
+                alt="Tushar Sharma"
+                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
               />
             </div>
-
-          </Tilt>
-
+          </div>
         </div>
-
       </div>
+
+      {/* ===== STYLES ===== */}
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        @keyframes dotMove {
+          from { background-position: 0 0; }
+          to { background-position: 400px 400px; }
+        }
+
+        @keyframes dotMoveReverse {
+          from { background-position: 0 0; }
+          to { background-position: -400px 400px; }
+        }
+
+        @keyframes pulseSlow {
+          0%, 100% { opacity: 0.35; }
+          50% { opacity: 0.55; }
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
+
+        .animate-pulseSlow {
+          animation: pulseSlow 4s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }
