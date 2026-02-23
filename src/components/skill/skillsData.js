@@ -11,16 +11,17 @@ export const skillsData = {
   backend: [
     { name: "Node JS", icon: "/skills/nodejs.png" },
     { name: "Express JS", icon: "/skills/express.png" },
-    { name: "Spring Boot", icon: "/skills/springboot.png" },
     { name: "MySQL", icon: "/skills/mysql.png" },
     { name: "MongoDB", icon: "/skills/mongodb.png" },
+    {name:"Postsql",icon:"/skills/postgre.png"},
+    {name :"Nestjs",icon:"/skills/NestJS.png"}
   ],
 
   languages: [
     { name: "Java", icon: "/skills/java.png" },
     { name: "Python", icon: "/skills/python.png" },
     { name: "JavaScript", icon: "/skills/javascript.png" },
-//     { name: "TypeScript", icon: "/icons/ts.pn" },
+    { name: "TypeScript", icon: "/skills/typescript.png" },
   ],
 
   tools: [
@@ -29,10 +30,8 @@ export const skillsData = {
     { name: "VS Code", icon: "/skills/vscode.png" },
     { name: "Postman", icon: "/skills/postman.png" },
     { name: "Verel", icon: "/skills/vercel.jpg" },
-    {name:"Render",icon:"/skills/render.jpg"},
-    {name:"Railways",icon:"/skills/railway.jpg"},
+    {name:"Figma",icon:"/skills/figma.png"},
     {name:"Thunder Client",icon:"/skills/thunderclient.jpg"},
-    {name:"Generative AI",icon:"/skills/generative ai.jpg"},
-    {name:"Promt-Engineering",icon:"/skills/promtengineering.jpg"}
+    
   ],
 };

@@ -5,7 +5,7 @@ export default function Home() {
   const year = new Date().getFullYear();
 
   const [text] = useTypewriter({
-    words: ["Software Developer", "Full Stack Developer"],
+    words: ["Software Developer", "Full Stack Developer","UI Designer"],
     loop: true,
     typeSpeed: 80,
     deleteSpeed: 50,
@@ -83,7 +83,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start">
             <a
-              href="/resume.pdf"
+              href="/resume/tushar.pdf"
               download
               className="group flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-blue-600 hover:text-white transition-all duration-300"
             >
