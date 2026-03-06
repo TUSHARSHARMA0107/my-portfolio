@@ -6,6 +6,7 @@ export const skillsData = {
     { name: "React JS", icon: "/skills/reactjs.png" },
     { name: "Tailwind CSS", icon: "/skills/tailwindcss.png" },
     { name: "Bootstrap", icon: "/skills/bootstrap.png" },
+    {name:"Nextjs",icon:"/skills/nextjs.png"}
   ],
 
   backend: [

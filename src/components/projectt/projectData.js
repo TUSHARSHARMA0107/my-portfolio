@@ -9,6 +9,15 @@ export const projectsData = [
     github: "https://github.com/TUSHARSHARMA0107/Easy-stay.git",
     live: "https://easy-stay-frontend.vercel.app/",
   },
+   {
+    title: "Yoga-Studio Website",
+    description:
+      "A modern multi-page Yoga Studio website designed to showcase studio facilities, classes, trainer information, and user experiences through images, videos, and interactive sections. It integrates features like session booking, reviews, blogs, and engaging visual layouts to create a calming and informative digital presence for the yoga studio.",
+    image: "/project/yogastudio.png",
+    tech: ["React.js (Vite)", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/TUSHARSHARMA0107/yogastudio",
+    live: "https://yogastudio-sigma.vercel.app/",
+  },
   {
     title: "Billing-Service",
     description:

@@ -24,7 +24,6 @@ export default function Navbar() {
         }
       });
 
-      // Force Contact at bottom
       if (
         window.innerHeight + window.scrollY >=
         document.body.offsetHeight - 10
@@ -41,9 +40,7 @@ export default function Navbar() {
   /* ================= RESPONSIVE AUTO CLOSE ================= */
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setOpen(false);
-      }
+      if (window.innerWidth >= 768) setOpen(false);
     };
 
     window.addEventListener("resize", handleResize);
@@ -54,19 +51,34 @@ export default function Navbar() {
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
-        <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-3 py-2 flex items-center justify-between shadow-2xl shadow-blue-500/10">
+      <header className="fixed top-5 md:top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
+
+        <div
+          className="
+          relative
+          backdrop-blur-2xl
+          bg-white/[0.04]
+          border border-white/10
+          rounded-full
+          px-4 py-2.5
+          flex items-center justify-between
+          shadow-[0_10px_40px_rgba(0,0,0,0.45)]
+        "
+        >
+
+          {/* subtle glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/10 via-transparent to-blue-600/10 pointer-events-none" />
 
           {/* LOGO */}
-          <div className="pl-4">
-            <h1 className="text-sm md:text-lg font-black tracking-tighter uppercase italic text-white">
-              Tushar<span className="hidden md:inline"> Sharma</span>
+          <div className="pl-4 relative z-10">
+            <h1 className="text-sm md:text-lg font-black tracking-tight text-white">
+              Tushar<span className="hidden md:inline text-white/80"> Sharma</span>
               <span className="text-blue-500">.</span>
             </h1>
           </div>
 
           {/* ================= DESKTOP NAV ================= */}
-          <nav className="hidden md:flex items-center bg-white/5 p-1.5 rounded-full border border-white/10">
+          <nav className="hidden md:flex items-center bg-white/[0.03] p-1.5 rounded-full border border-white/10 backdrop-blur-xl relative z-10">
             <LayoutGroup>
               <div className="relative flex gap-1">
                 {navItems.map((item) => {
@@ -79,34 +91,44 @@ export default function Navbar() {
                       href={`#${key}`}
                       onMouseEnter={() => setHovered(key)}
                       onMouseLeave={() => setHovered(null)}
-                      className="relative px-8 py-3 text-[11px] uppercase tracking-[0.22em]"
+                      className="relative px-7 py-3 text-[11px] uppercase tracking-[0.22em]"
                     >
-                      {/* ACTIVE PILL */}
                       {isActive && (
                         <motion.div
                           layoutId="active-pill"
-                          className="absolute inset-0 bg-blue-600 rounded-full -z-10 shadow-[0_0_28px_rgba(37,99,235,0.45)]"
-                          transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                          className="
+                          absolute inset-0 rounded-full
+                          bg-gradient-to-r from-blue-600 to-blue-500
+                          shadow-[0_0_35px_rgba(37,99,235,0.55)]
+                          -z-10
+                        "
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 22,
+                          }}
                         />
                       )}
 
-                      {/* HOVER PILL */}
                       {hovered === key && !isActive && (
                         <motion.div
                           layoutId="hover-pill"
-                          className="absolute inset-0 bg-blue-500/25 rounded-full -z-10"
-                          transition={{ type: "spring", stiffness: 300, damping: 26 }}
+                          className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 26,
+                          }}
                         />
                       )}
 
                       <motion.span
                         className={`relative z-10 transition-all
-                          ${
-                            isActive
-                              ? "text-white font-extrabold"
-                              : "text-white/75 font-semibold hover:text-white"
-                          }
-                        `}
+                        ${
+                          isActive
+                            ? "text-white font-bold"
+                            : "text-white/70 hover:text-white"
+                        }`}
                         whileHover={{ scale: 1.06 }}
                         transition={{ type: "spring", stiffness: 280 }}
                       >
@@ -120,16 +142,34 @@ export default function Navbar() {
           </nav>
 
           {/* ================= DESKTOP SOCIALS ================= */}
-          <div className="hidden md:flex gap-2">
-            <SocialIcon href="https://github.com/TUSHARSHARMA0107"><FiGithub /></SocialIcon>
-            <SocialIcon href="https://www.linkedin.com/in/tushar-sharma-14ab3a24b"><FiLinkedin /></SocialIcon>
-            <SocialIcon href="mailto:tushar43189@gmail.com"><FiMail /></SocialIcon>
+          <div className="hidden md:flex gap-2 relative z-10">
+            <SocialIcon href="https://github.com/TUSHARSHARMA0107">
+              <FiGithub />
+            </SocialIcon>
+
+            <SocialIcon href="https://www.linkedin.com/in/tushar-sharma-14ab3a24b">
+              <FiLinkedin />
+            </SocialIcon>
+
+            <SocialIcon href="mailto:tushar43189@gmail.com">
+              <FiMail />
+            </SocialIcon>
           </div>
 
           {/* ================= MOBILE TOGGLE ================= */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white text-lg"
+            className="
+            md:hidden
+            w-10 h-10
+            flex items-center justify-center
+            rounded-full
+            bg-white/10
+            border border-white/10
+            text-white text-lg
+            hover:bg-white/20
+            transition
+          "
           >
             <FiMenu />
           </button>
@@ -155,23 +195,34 @@ export default function Navbar() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 220, damping: 26 }}
-              className="fixed top-0 right-0 h-full w-[82%]
-                         bg-gradient-to-b from-[#0a0a0a] via-[#0b0b0b] to-black
-                         border-l border-white/10 z-50 p-8
-                         flex flex-col justify-between
-                         shadow-[-20px_0_60px_rgba(37,99,235,0.15)]"
+              className="
+              fixed top-0 right-0 h-full w-[82%]
+              bg-gradient-to-b from-[#0b0b0b] via-[#0c0c0c] to-black
+              border-l border-white/10
+              z-50 p-8
+              flex flex-col justify-between
+              shadow-[-20px_0_80px_rgba(0,0,0,0.6)]
+            "
             >
               <div>
                 {/* HEADER */}
                 <div className="flex justify-between items-center mb-14 pb-6 border-b border-white/10">
-                  <span className="text-lg font-black italic text-white">
+                  <span className="text-lg font-black text-white">
                     Tushar <span className="text-blue-500">Sharma</span>.
                   </span>
+
                   <button
                     onClick={() => setOpen(false)}
-                    className="w-10 h-10 flex items-center justify-center
-                               rounded-full bg-white/5 text-gray-300
-                               hover:bg-blue-600 hover:text-white transition-all"
+                    className="
+                    w-10 h-10
+                    flex items-center justify-center
+                    rounded-full
+                    bg-white/5
+                    border border-white/10
+                    text-gray-300
+                    hover:bg-blue-600 hover:text-white
+                    transition
+                  "
                   >
                     <FiX />
                   </button>
@@ -191,7 +242,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, x: 40 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.08 }}
-                        className="relative pl-6 text-2xl uppercase tracking-tight font-bold"
+                        className="relative pl-6 text-2xl uppercase font-bold"
                       >
                         {isActive && (
                           <span className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-[3px] rounded-full bg-blue-500" />
@@ -199,8 +250,11 @@ export default function Navbar() {
 
                         <span
                           className={`transition-colors
-                            ${isActive ? "text-blue-500" : "text-white hover:text-blue-400"}
-                          `}
+                          ${
+                            isActive
+                              ? "text-blue-500"
+                              : "text-white hover:text-blue-400"
+                          }`}
                         >
                           {item}
                         </span>
@@ -215,15 +269,31 @@ export default function Navbar() {
                 <a
                   href="/resume/tushar.pdf"
                   download
-                  className="block w-full bg-blue-600 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest shadow-lg shadow-blue-600/30 text-center"
+                  className="
+                  block w-full
+                  bg-gradient-to-r from-blue-600 to-blue-500
+                  text-white py-4
+                  rounded-xl
+                  font-bold uppercase text-xs tracking-widest
+                  shadow-lg shadow-blue-600/30
+                  text-center
+                "
                 >
                   Download Resume
                 </a>
 
                 <div className="flex gap-4 justify-center">
-                  <SocialIcon href="https://github.com/TUSHARSHARMA0107"><FiGithub /></SocialIcon>
-                  <SocialIcon href="https://www.linkedin.com/in/tushar-sharma-14ab3a24b"><FiLinkedin /></SocialIcon>
-                  <SocialIcon href="mailto:tushar43189@gmail.com"><FiMail /></SocialIcon>
+                  <SocialIcon href="https://github.com/TUSHARSHARMA0107">
+                    <FiGithub />
+                  </SocialIcon>
+
+                  <SocialIcon href="https://www.linkedin.com/in/tushar-sharma-14ab3a24b">
+                    <FiLinkedin />
+                  </SocialIcon>
+
+                  <SocialIcon href="mailto:tushar43189@gmail.com">
+                    <FiMail />
+                  </SocialIcon>
                 </div>
               </div>
             </motion.aside>
@@ -240,10 +310,18 @@ function SocialIcon({ href, children }) {
     <a
       href={href}
       target="_blank"
-      className="w-9 h-9 flex items-center justify-center rounded-full
-                 border border-white/10 bg-white/5 text-white
-                 hover:bg-blue-600 hover:border-blue-600
-                 transition-all duration-300"
+      className="
+      w-9 h-9
+      flex items-center justify-center
+      rounded-full
+      border border-white/10
+      bg-white/5
+      text-white
+      hover:bg-blue-600
+      hover:border-blue-600
+      hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]
+      transition-all duration-300
+    "
     >
       {children}
     </a>
