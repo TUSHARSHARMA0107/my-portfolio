@@ -160,13 +160,10 @@ html.light, body.light {
 
 
 /* ===== MOBILE STABILITY FIX (SAFE) ===== */
-
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;            /* prevents horizontal movement */
-  overscroll-behavior: none;     /* removes elastic/bounce scroll */
-  touch-action: manipulation;    /* smoother touch behavior */
+  overflow-x: hidden;
 }
 
 /* Prevent any element from exceeding viewport width */
