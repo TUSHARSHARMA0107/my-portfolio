@@ -157,3 +157,26 @@ html.light, body.light {
   background-color: #f7f7f7;
   color: #222;
 }
+
+
+/* ===== MOBILE STABILITY FIX (SAFE) ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;            /* prevents horizontal movement */
+  overscroll-behavior: none;     /* removes elastic/bounce scroll */
+  touch-action: manipulation;    /* smoother touch behavior */
+}
+
+/* Prevent any element from exceeding viewport width */
+* {
+  max-width: 100%;
+}
+
+
+@supports (height: 100dvh) {
+  .h-screen {
+    height: 100dvh;
+  }
+}
