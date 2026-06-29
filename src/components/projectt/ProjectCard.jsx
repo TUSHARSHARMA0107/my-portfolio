@@ -3,7 +3,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 export default function ProjectCard({ project }) {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6 }}
@@ -81,6 +81,6 @@ export default function ProjectCard({ project }) {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
